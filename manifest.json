@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "VTOP Visual Timetable Generator",
+  "version": "1.2.0",
+  "description": "Visualizes your course timetable dynamically right inside VTOP course registration with one-click PNG download.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.vit.ac.in/*",
+    "*://*/*vtop*",
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "file:///*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.vit.ac.in/*",
+        "*://*/*vtop*",
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "file:///*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
+        "lib/html2canvas.min.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>VTOP Timetable Generator</title>
+  <style>
+    body {
+      width: 290px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 14px;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 15px;
+      color: #166534;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      background: #dcfce7;
+      color: #15803d;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      color: #475569;
+      margin: 6px 0;
+    }
+
+    .features-list {
+      margin: 8px 0;
+      padding-left: 18px;
+      font-size: 12px;
+      color: #334155;
+    }
+
+    .features-list li {
+      margin-bottom: 4px;
+    }
+
+    .btn {
+      width: 100%;
+      background: #16a34a;
+      color: white;
+      border: none;
+      padding: 9px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      background: #15803d;
+    }
+
+    .footer {
+      margin-top: 12px;
+      font-size: 11px;
+      text-align: center;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="icons/icon48.png" width="28" height="28" alt="Logo">
+    <h2>VTOP Timetable</h2>
+  </div>
+
+  <div class="status-badge">
+    <span class="status-dot"></span>
+    <span>Extension Active</span>
+  </div>
+
+  <p>The visual timetable injects automatically below the <b>Registered Credits(s)</b> section on any VTOP course
+    registration page.</p>
+
+  <ul class="features-list">
+    <li>Maps all theory, tutorial, seminar & lab slots</li>
+    <li>Auto-generates clean course acronyms</li>
+    <li>Click any acronym in the timetable to edit it</li>
+    <li>Download high-res PNG</li>
+  </ul>
+
+  <button id="btn-reinject" class="btn">
+    Refresh Timetable
+  </button>
+
+  <div class="footer">
+    Works on all VTOP registration portals
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
